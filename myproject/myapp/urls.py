@@ -7,7 +7,7 @@ from .views import *
 
 urlpatterns = [
     
-    path('createmultipartuplaod/',CreateMultipartUplaod.as_view()),
+    path('createmultipartupload/',CreateMultipartUplaod.as_view()),
     path('generatepresignedurl/',GeneratingPresignedUrl.as_view()),
     path('completemuiltipartupload/',CompleteMultpartUpload.as_view()),
     # path('presignedurltodownload/',S3DownloadView.as_view()),
