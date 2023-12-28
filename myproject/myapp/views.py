@@ -185,7 +185,7 @@ class PresignedDownloadApiview(APIView):
         try:
 
             model_instance = MyModel.objects.get(id=id)
-            object_key = model_instance.file_path
+            object_key = model_instance.object_path
 
             url = s3_client.generate_presigned_url(
                 ClientMethod='get_object',
