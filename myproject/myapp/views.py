@@ -24,7 +24,7 @@ bucket_name = settings.AWS_STORAGE_BUCKET_NAME
 class CreateMultipartUplaod(APIView):
     def post(self,request):
         try:
-            serializer = CreateMultipartUplaodUploadSerializer(data=request.data)
+            serializer = CreateMultipartUplaodSerializer(data=request.data)
             if serializer.is_valid():
 
                 original_name = serializer.validated_data.get('original_name')

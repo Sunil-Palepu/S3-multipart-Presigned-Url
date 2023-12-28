@@ -4,7 +4,7 @@ from .models import MyModel
 
 
 
-class CreateMultipartUplaodUploadSerializer(serializers.Serializer):
+class CreateMultipartUplaodSerializer(serializers.Serializer):
     original_name = serializers.CharField(max_length=255)
     content_type = serializers.CharField(max_length=255)
 
