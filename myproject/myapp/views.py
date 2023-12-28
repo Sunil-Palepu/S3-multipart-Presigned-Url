@@ -50,7 +50,7 @@ class GeneratingPresignedUrl(APIView):
             serializer = GeneratingPresignedUrlSerializer(data=request.data)
             if serializer.is_valid():
 
-                object_path = serializer.validated_data.get('object_path')
+                object_path = serializer.validated_data.get('key')
                 no_of_parts = serializer.validated_data.get('no_of_parts')
                 upload_id = serializer.validated_data.get('upload_id')
 
