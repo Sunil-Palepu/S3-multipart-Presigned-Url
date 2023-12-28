@@ -83,7 +83,7 @@ class CompleteMultpartUpload(APIView):
                 
                 parts = serializer.validated_data.get('parts')
                 upload_id  = serializer.validated_data.get('upload_id')
-                object_path = serializer.validated_data.get('object_path')
+                object_path = serializer.validated_data.get('key')
                 
                 response = s3_client.complete_multipart_upload(
                     Bucket = bucket_name,
