@@ -9,9 +9,9 @@ class CreateMultipartUplaodSerializer(serializers.Serializer):
     content_type = serializers.CharField(max_length=255)
 
     def validate_content_type(self,content_type):
-        allowed_formats = ['image/jpeg', 'video/mp4']
+        allowed_formats = ['image/jpeg', 'video/mp4','application/pdf', 'application/docx', 'application/txt']
         if content_type not in allowed_formats:
-            raise serializers.ValidationError('content type should be image/jpeg or video/mp4')
+            raise serializers.ValidationError(f'content type should in {allowed_formats} only')
 
 
 class GeneratingPresignedUrlSerializer(serializers.Serializer):

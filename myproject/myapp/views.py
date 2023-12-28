@@ -96,6 +96,8 @@ class CompleteMultpartUpload(APIView):
                 model_instance = MyModel.objects.create(object_path=object_path)
                 model_instance.save()
 
+                
+
 
                 return Response({'message':'SUCCESS','response': response},status=status.HTTP_201_CREATED)
             return Response(serializer.errors,status=status.HTTP_400_BAD_REQUEST)
